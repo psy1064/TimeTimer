@@ -33,7 +33,16 @@ function draw(){
     ctx.closePath();
   } // 바탕 원 그리는 함수
   function number() {
-    // ctx.moveTo(150,150);
-
-  }
+    ctx.font = "38px serif";      // 글자 크기
+    ctx.textAlign = "center";     // 글자 가운데 정렬
+    ctx.textBaseline = "middle";  // 글자 가운데 배치
+    ctx.fillStyle = "black";      // 글자 색
+    ctx.translate(150,150);       // (150,150)좌표를 캔버스의 중심좌표(0,0)로 사용
+    for ( var number = 1; number <= 12; number++ ){
+      var angle = (Math.PI / 180) * 30;
+      ctx.rotate( angle );
+      ctx.fillText( number.toString(), 0, -120);
+    }
+    ctx.translate(-150,-150);
+  } // 시계 주변 시간 출력
 }
