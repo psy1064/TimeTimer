@@ -1,0 +1,15 @@
+  {
+    "manifest_version": 2,
+
+    "name": "Time Timer",                                    // 프로젝트 이름
+    "description": "구글 스프린트에서 사용하는 타임 타이머",    // 프로젝트 설명
+    "version": "1.0",
+
+    "browser_action": {
+      "default_icon": "icon.png", // 확장 프로그램 아이콘
+      "default_popup": "popup.html" // 확장 프로그램을 눌렀을 때 나오는 화면
+    },
+    "permissions": [
+      "activeTab"
+    ]
+  }
